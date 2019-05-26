@@ -22,15 +22,15 @@ var server = http.createServer(function(request, response){
 
     if(path == '/') {
         response.setHeader('Content-Type', 'text/html')
-        response.write('<!DOCTYPE>\n<html><body><h1>Hello HTML</h1><a href="/style.css">css</a>\n<a href="/main.js">js</a><body></html>')
+        response.write('<!DOCTYPE>\n<html><link rel="stylesheet" href="/style.css"><script src="/main.js"></script><body><h1>Hello HTML</h1><a href="/style.css">css</a>\n<a href="/main.js">js</a><body></html>')
     }
     else if(path == '/style.css') {
         response.setHeader('Content-Type', 'text/css')
-        response.write('Hello CSS')
+        response.write('h1{color:pink}')
     } 
     else if(path == '/main.js') {
         response.setHeader('Content-Type', 'application/javascript')
-        response.write('Hello JavaScript!)')
+        response.write('alert(Hello JavaScript)')
     }
     else {
         response.statusCode = 404
