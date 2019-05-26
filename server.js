@@ -17,8 +17,6 @@ var server = http.createServer(function(request, response){
   var queryObject = parsedUrl.query
   var method = request.method
 
-  /******** 从这里开始看，上面不要看 ************/
-
 
 
 
@@ -45,9 +43,6 @@ var server = http.createServer(function(request, response){
 
 
 
-
-
-  /******** 代码结束，下面不要看 ************/
 })
 
 server.listen(port)
